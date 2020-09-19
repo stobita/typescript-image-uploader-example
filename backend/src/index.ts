@@ -9,10 +9,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-app.post('profile', upload.single('avatar'), (req) => {
+app.post('/profile', upload.single('avatar'), (req) => {
     console.log(req.file);
 });
-app.post('photos/upload', upload.array('photos', 12), (req) => {
+app.post('/photos/upload', upload.array('photos', 12), (req) => {
     console.log(req.files);
 });
 
